@@ -1,0 +1,102 @@
+# ==========================================================
+# .gitignore —— 正常项目该有的版本（按类别分组）
+# ==========================================================
+
+# ---------- 1. 操作系统 ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- 2. 编辑器 / IDE ----------
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.swp
+*~
+
+# ---------- 3. 环境与密钥（最不能提交）----------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+secrets.json
+credentials.json
+*apikey*
+*api_key*
+*secret*
+token.txt
+
+# ---------- 4. Node / 前端 ----------
+node_modules/
+.vite/
+.next/
+.nuxt/
+dist/
+dist-ssr/
+.cache/
+npm-debug.log*
+yarn-error.log*
+
+# ---------- 5. Python / 后端 ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# ---------- 6. 构建产物 ----------
+build/
+out/
+bin/
+obj/
+*.exe
+*.dll
+*.o
+*.class
+
+# ---------- 7. 运行时数据 ----------
+logs/
+*.log
+*.sqlite
+*.db
+# 只排除上传的图片，但保留目录结构 
+storage/uploads/*
+!storage/uploads/.gitkeep
+media/
+temp/
+tmp/
+*.tmp
+*.bak
+
+# ---------- 8. 测试 / 覆盖率 ----------
+coverage/
+.nyc_output/
+test-results/
+
+# ---------- 9. 打包产物 ----------
+*.zip
+*.tar.gz
+release/
+
+# ---------- 10. 大文件 ----------
+*.mp4
+*.mov
+*.psd
+
+# ---------- 例外（这些必须提交）----------
+!.gitkeep
+!.gitignore
+!README.md
+!package-lock.json
+!requirements.txt
+!.env.example
